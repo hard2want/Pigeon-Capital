@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		3685845021176944000513A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685844F21176944000513A3 /* AppDelegate.swift */; };
-		3685845221176944000513A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685845121176944000513A3 /* ViewController.swift */; };
 		3685845521176944000513A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3685845321176944000513A3 /* Main.storyboard */; };
 		3685845721176945000513A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3685845621176945000513A3 /* Assets.xcassets */; };
 		3685845A21176945000513A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3685845821176945000513A3 /* LaunchScreen.storyboard */; };
+		3685846421176B66000513A3 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685846321176B66000513A3 /* Company.swift */; };
+		3685846621179F1B000513A3 /* LeadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685846521179F1B000513A3 /* LeadTableViewController.swift */; };
+		36A395C62117C01400E39519 /* LeadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A395C52117C01400E39519 /* LeadTableViewCell.swift */; };
+		36A395CA2117CB8900E39519 /* AddLeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A395C92117CB8900E39519 /* AddLeadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3685844C21176944000513A3 /* Pigeon Capital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pigeon Capital.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3685844F21176944000513A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3685845121176944000513A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3685845421176944000513A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3685845621176945000513A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3685845921176945000513A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3685845B21176945000513A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3685846321176B66000513A3 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		3685846521179F1B000513A3 /* LeadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadTableViewController.swift; sourceTree = "<group>"; };
+		36A395C52117C01400E39519 /* LeadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadTableViewCell.swift; sourceTree = "<group>"; };
+		36A395C92117CB8900E39519 /* AddLeadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLeadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,10 @@
 		3685844321176944000513A3 = {
 			isa = PBXGroup;
 			children = (
+				3685845321176944000513A3 /* Main.storyboard */,
+				3685846221176B4B000513A3 /* Models */,
+				3685846121176968000513A3 /* Lead View Controllers */,
+				36A395CB2118884000E39519 /* Prescreen View Controllers */,
 				3685844E21176944000513A3 /* Pigeon Capital */,
 				3685844D21176944000513A3 /* Products */,
 			);
@@ -55,13 +65,36 @@
 			isa = PBXGroup;
 			children = (
 				3685844F21176944000513A3 /* AppDelegate.swift */,
-				3685845121176944000513A3 /* ViewController.swift */,
-				3685845321176944000513A3 /* Main.storyboard */,
 				3685845621176945000513A3 /* Assets.xcassets */,
 				3685845821176945000513A3 /* LaunchScreen.storyboard */,
 				3685845B21176945000513A3 /* Info.plist */,
 			);
 			path = "Pigeon Capital";
+			sourceTree = "<group>";
+		};
+		3685846121176968000513A3 /* Lead View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36A395C92117CB8900E39519 /* AddLeadViewController.swift */,
+				3685846521179F1B000513A3 /* LeadTableViewController.swift */,
+				36A395C52117C01400E39519 /* LeadTableViewCell.swift */,
+			);
+			path = "Lead View Controllers";
+			sourceTree = "<group>";
+		};
+		3685846221176B4B000513A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3685846321176B66000513A3 /* Company.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		36A395CB2118884000E39519 /* Prescreen View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Prescreen View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3685845221176944000513A3 /* ViewController.swift in Sources */,
+				3685846621179F1B000513A3 /* LeadTableViewController.swift in Sources */,
 				3685845021176944000513A3 /* AppDelegate.swift in Sources */,
+				3685846421176B66000513A3 /* Company.swift in Sources */,
+				36A395C62117C01400E39519 /* LeadTableViewCell.swift in Sources */,
+				36A395CA2117CB8900E39519 /* AddLeadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Pigeon-Capital";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -308,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Pigeon-Capital";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
