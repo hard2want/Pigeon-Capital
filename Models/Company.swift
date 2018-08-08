@@ -28,83 +28,83 @@ class Company: Codable {
     var responseUnder24Hours: Bool
     
     // prescreen info
-    var iot: Bool = false
-    var midwest: Bool = false
-    var leadInvestor: Bool = false
-    var preSeedUnder6M: Bool = false
-    var raiseUnder1M: Bool = false
+    var iot: Bool
+    var midwest: Bool
+    var leadInvestor: Bool
+    var preSeedUnder6M: Bool
+    var raiseUnder1M: Bool
     
     // non-negotiables
-    var founderRightPersonToAddressProblem: String = ""
-    var founderIsResponsive: String = ""
-    var ideaHasStrongRecurringRevenueComponent: String = ""
-    var teamCommittedFullTimePostClose: String = ""
+    var founderRightPersonToAddressProblem: String
+    var founderIsResponsive: String
+    var ideaHasStrongRecurringRevenueComponent: String
+    var teamCommittedFullTimePostClose: String
     
     // thesis info
-    var tractable: Bool = false
-    var democratization: Bool = false
-    var accessToIdleSupply: Bool = false
-    var customerExpansion: Bool = false
-    var networkEffects: Bool = false
-    var bizDevInnovation: Bool = false
-    var competeWithNonConsumption: Bool = false
-    var thesisCounter: Int = 0
+    var tractable: Bool
+    var democratization: Bool
+    var accessToIdleSupply: Bool
+    var customerExpansion: Bool
+    var networkEffects: Bool
+    var bizDevInnovation: Bool
+    var competeWithNonConsumption: Bool
+    var thesisCounter: Int
     
     // talent info - founder
-    var founderStrengthIT: String = ""
-    var founderStrengthSales: String = ""
-    var founderStrengthMarketing: String = ""
-    var founderStrengthHustler: String = ""
-    var founderStrengthLearner: String = ""
-    var foundStoryStoryTellingAbility: String = ""
-    var foundDecisionMakingLogic: String = ""
-    var founderCustomerObsessed: String = ""
-    var founderDomainExpertise: String = ""
+    var founderStrengthIT: String
+    var founderStrengthSales: String
+    var founderStrengthMarketing: String
+    var founderStrengthHustler: String
+    var founderStrengthLearner: String
+    var foundStoryStoryTellingAbility: String
+    var foundDecisionMakingLogic: String
+    var founderCustomerObsessed: String
+    var founderDomainExpertise: String
 
     
     // talent info - team
-    var teamStrongTechnicalBuilder: String = ""
-    var teamStrongBDLeader: String = ""
+    var teamStrongTechnicalBuilder: String
+    var teamStrongBDLeader: String
 
     // idea / marketplace
-    var clearProblemDefinition: String = ""
-    var largeGrowingTamSamSom: String = ""
-    var validRealMoat: String = ""
-    var strongBeachHead: String = ""
-    var ableToBridgeTamSam: String = ""
-    var tenYearTest: String = ""
-    var clearUserBuyer: String = ""
-    var signularFocusedModel: String = ""
-    var definedSuccessMetrics: String = ""
-    var favorableMarketTrend: String = ""
-    var customerBudgetLineItem: String = ""
+    var clearProblemDefinition: String
+    var largeGrowingTamSamSom: String
+    var validRealMoat: String
+    var strongBeachHead: String
+    var ableToBridgeTamSam: String
+    var tenYearTest: String
+    var clearUserBuyer: String
+    var signularFocusedModel: String
+    var definedSuccessMetrics: String
+    var favorableMarketTrend: String
+    var customerBudgetLineItem: String
     
     // execution
-    var coreOfferingInHouse: String = ""
-    var highUserEngagement: String = ""
-    var highSomTraction: String = ""
-    var lowChurn: String = ""
-    var strongMarketingAdoptionPlan: String = ""
-    var fundingProvidesRunway: String = ""
+    var coreOfferingInHouse: String
+    var highUserEngagement: String
+    var highSomTraction: String
+    var lowChurn: String
+    var strongMarketingAdoptionPlan: String
+    var fundingProvidesRunway: String
 
     // diligence - business
-    var useCaseSupport: Bool = false
-    var technicalDifferentiation: Bool = false
-    var teamBackground: Bool = false
-    var marketAnalysis: Bool = false
-    var revenueModel: Bool = false
-    var customerAcquisition: Bool = false
-    var financialReview: Bool = false
-    var riskAnalysis: Bool = false
+    var useCaseSupport: Bool
+    var technicalDifferentiation: Bool
+    var teamBackground: Bool
+    var marketAnalysis: Bool
+    var revenueModel: Bool
+    var customerAcquisition: Bool
+    var financialReview: Bool
+    var riskAnalysis: Bool
     
     // diligence - legal
-    var charterDocuments: Bool = false
-    var boardMinutes: Bool = false
-    var stockCapTable: Bool = false
-    var regulatory: Bool = false
-    var intellectualProperty: Bool = false
-    var managementEmployee: Bool = false
-    var financialAudit: Bool = false
+    var charterDocuments: Bool
+    var boardMinutes: Bool
+    var stockCapTable: Bool
+    var regulatory: Bool
+    var intellectualProperty: Bool
+    var managementEmployee: Bool
+    var financialAudit: Bool
     
     // pipeline status
     var preScreen: Bool
@@ -237,11 +237,11 @@ class Company: Codable {
         self.responseUnder24Hours = responseUnder24Hours
         
         // prescreen info
-        self.iot = false
-        self.midwest = false
-        self.leadInvestor = false
-        self.preSeedUnder6M = false
-        self.raiseUnder1M = false
+        self.iot = iot
+        self.midwest = midwest
+        self.leadInvestor = leadInvestor
+        self.preSeedUnder6M = preSeedUnder6M
+        self.raiseUnder1M = raiseUnder1M
         
         // non-negotiables
         self.founderRightPersonToAddressProblem = ""
@@ -250,13 +250,13 @@ class Company: Codable {
         self.teamCommittedFullTimePostClose = ""
         
         // thesis info
-        self.tractable = false
-        self.democratization = false
-        self.accessToIdleSupply = false
-        self.customerExpansion = false
-        self.networkEffects = false
-        self.bizDevInnovation = false
-        self.competeWithNonConsumption = false
+        self.tractable = tractable
+        self.democratization = democratization
+        self.accessToIdleSupply = accessToIdleSupply
+        self.customerExpansion = customerExpansion
+        self.networkEffects = networkEffects
+        self.bizDevInnovation = bizDevInnovation
+        self.competeWithNonConsumption = competeWithNonConsumption
         self.thesisCounter = 0
         
         // talent info - founder
@@ -297,29 +297,29 @@ class Company: Codable {
         self.fundingProvidesRunway = ""
         
         // diligence - business
-        self.useCaseSupport = false
-        self.technicalDifferentiation = false
-        self.teamBackground = false
-        self.marketAnalysis = false
-        self.revenueModel = false
-        self.customerAcquisition = false
-        self.financialReview = false
-        self.riskAnalysis = false
+        self.useCaseSupport = useCaseSupport
+        self.technicalDifferentiation = technicalDifferentiation
+        self.teamBackground = teamBackground
+        self.marketAnalysis = marketAnalysis
+        self.revenueModel = revenueModel
+        self.customerAcquisition = customerAcquisition
+        self.financialReview = financialReview
+        self.riskAnalysis = riskAnalysis
         
         // diligence - legal
-        self.charterDocuments = false
-        self.boardMinutes = false
-        self.stockCapTable = false
-        self.regulatory = false
-        self.intellectualProperty = false
-        self.managementEmployee = false
-        self.financialAudit = false
+        self.charterDocuments = charterDocuments
+        self.boardMinutes = boardMinutes
+        self.stockCapTable = stockCapTable
+        self.regulatory = regulatory
+        self.intellectualProperty = intellectualProperty
+        self.managementEmployee = managementEmployee
+        self.financialAudit = financialAudit
         
         // pipeline status
         self.preScreen = preScreen
-        self.scorecard = false
-        self.diligence = false
-        self.portfolio = false
+        self.scorecard = scorecard
+        self.diligence = diligence
+        self.portfolio = portfolio
         self.pass = pass
     } // end init()
 
@@ -327,46 +327,102 @@ class Company: Codable {
     
     static let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     
-    static let archiveURL = documentsDirectory.appendingPathComponent("companies").appendingPathExtension("plist")
+    static let archiveCompaniesURL = documentsDirectory.appendingPathComponent("companies").appendingPathExtension("plist")
+
+    static let archiveLeadsURL = documentsDirectory.appendingPathComponent("leads").appendingPathExtension("plist")
+
+    static let archivePreScreenURL = documentsDirectory.appendingPathComponent("prescreen").appendingPathExtension("plist")
     
     // -------- SaveToFile
     
-    static func saveToFile(companies: [Company]){
+    static func saveCompaniesToFile(companies: [Company]){
         let propertyListEncoder = PropertyListEncoder()
         let encodedCompanies = try? propertyListEncoder.encode(companies)
-        try? encodedCompanies?.write(to: archiveURL, options: .noFileProtection)
-    } // end saveToFile()
+        try? encodedCompanies?.write(to: archiveCompaniesURL, options: .noFileProtection)
+    } // end saveCompaniesToFile()
+
+    static func saveLeadsToFile(leads: [Company]){
+        let propertyListEncoder = PropertyListEncoder()
+        let encodedCompanies = try? propertyListEncoder.encode(leads)
+        try? encodedCompanies?.write(to: archiveLeadsURL, options: .noFileProtection)
+    } // end saveLeadsToFile()
     
+    static func savePrescreenedToFile(preScreened: [Company]){
+        let propertyListEncoder = PropertyListEncoder()
+        let encodedCompanies = try? propertyListEncoder.encode(preScreened)
+        try? encodedCompanies?.write(to: archivePreScreenURL, options: .noFileProtection)
+    } // end savePreScreenedToFile()
     
     // -------- loadFromFile
     
-    static func loadFromFile() -> [Company]? {
+    static func loadCompaniesFromFile() -> [Company]? {
         let propertyListDecoder = PropertyListDecoder()
         // attempts to a URL if data already exists
-        if let retrievedCompaniesData = try? Data(contentsOf: archiveURL) {
+        if let retrievedCompaniesData = try? Data(contentsOf: archiveCompaniesURL) {
             let decodedCompanies = try? propertyListDecoder.decode([Company].self, from: retrievedCompaniesData)
             // if the data exists, return the existing data
             return decodedCompanies!}
         // else call the sampleCompanies and return the starter data
         return sampleCompanies()
-    } // end loadFromFile
+    } // end loadCompaniesFromFile
+    
+    static func loadLeadsFromFile() -> [Company]? {
+        let propertyListDecoder = PropertyListDecoder()
+        // attempts to a URL if data already exists
+        if let retrievedLeadsData = try? Data(contentsOf: archiveLeadsURL) {
+            let decodedLeads = try? propertyListDecoder.decode([Company].self, from: retrievedLeadsData)
+            // if the data exists, return the existing data
+            return decodedLeads!}
+        // else call the sampleCompanies and return the starter data
+        return sampleLeads()
+    } // end loadCompaniesFromFile
+    
+    static func loadPrescreenFromFile() -> [Company]? {
+        let propertyListDecoder = PropertyListDecoder()
+        // attempts to a URL if data already exists
+        if let retrievedPrescreenData = try? Data(contentsOf: archivePreScreenURL) {
+            let decodedPrescreen = try? propertyListDecoder.decode([Company].self, from: retrievedPrescreenData)
+            // if the data exists, return the existing data
+            return decodedPrescreen!}
+        // else call the sampleCompanies and return the starter data
+        return samplePrescreen()
+    } // end loadPrescreenFromFile
+
     
     
-    // --------- sample Company array
+    
+    
+    // ------------------------------------------- sample Company array
     
     static func sampleCompanies() -> [Company]{
         let sampleCompanies: [Company] = [
-            
-            Company(name: "Company A", description: "A good company to invest in", city: "Chicago", state: "IL", website: "", industry: "", agent: "", referral: true, strongReferral: false, priority: false, email1Sent: false, responseUnder24Hours: false, iot: false, midwest: false, leadInvestor: false, preSeedUnder6M: false, raiseUnder1M: false, founderRightPersonToAddressProblem: "", founderIsResponsive: "", ideaHasStrongRecurringRevenueComponent: "", teamCommittedFullTimePostClose: "", tractable: false, democratization: false, accessToIdleSupply: false, customerExpansion: false, networkEffects: false, bizDevInnovation: false, competeWithNonConsumption: false, thesisCounter: 0, founderStrengthIT: "", founderStrengthSales: "", founderStrengthMarketing: "", founderStrengthHustler: "", founderStrengthLearner: "", foundStoryStoryTellingAbility: "", foundDecisionMakingLogic: "", founderCustomerObsessed: "", founderDomainExpertise: "", teamStrongTechnicalBuilder: "", teamStrongBDLeader: "", clearProblemDefinition: "", largeGrowingTamSamSom: "", validRealMoat: "", strongBeachHead: "", ableToBridgeTamSam: "", tenYearTest: "", clearUserBuyer: "", signularFocusedModel: "", definedSuccessMetrics: "", favorableMarketTrend: "", customerBudgetLineItem: "", coreOfferingInHouse: "", highUserEngagement: "", highSomTraction: "", lowChurn: "", strongMarketingAdoptionPlan: "", fundingProvidesRunway: "", useCaseSupport: false, technicalDifferentiation: false, teamBackground: false, marketAnalysis: false, revenueModel: false, customerAcquisition: false, financialReview: false, riskAnalysis: false, charterDocuments: false, boardMinutes: false, stockCapTable: false, regulatory: false, intellectualProperty: false, managementEmployee: false, financialAudit: false, preScreen: false, scorecard: false, diligence: false, portfolio: false, pass: false),
-            Company(name: "Company B", description: "Another good company to invest in", city: "Chicago", state: "IL", website: "", industry: "", agent: "", referral: false, strongReferral: false, priority: false, email1Sent: false, responseUnder24Hours: false, iot: false, midwest: false, leadInvestor: false, preSeedUnder6M: false, raiseUnder1M: false, founderRightPersonToAddressProblem: "", founderIsResponsive: "", ideaHasStrongRecurringRevenueComponent: "", teamCommittedFullTimePostClose: "", tractable: false, democratization: false, accessToIdleSupply: false, customerExpansion: false, networkEffects: false, bizDevInnovation: false, competeWithNonConsumption: false, thesisCounter: 0, founderStrengthIT: "", founderStrengthSales: "", founderStrengthMarketing: "", founderStrengthHustler: "", founderStrengthLearner: "", foundStoryStoryTellingAbility: "", foundDecisionMakingLogic: "", founderCustomerObsessed: "", founderDomainExpertise: "", teamStrongTechnicalBuilder: "", teamStrongBDLeader: "", clearProblemDefinition: "", largeGrowingTamSamSom: "", validRealMoat: "", strongBeachHead: "", ableToBridgeTamSam: "", tenYearTest: "", clearUserBuyer: "", signularFocusedModel: "", definedSuccessMetrics: "", favorableMarketTrend: "", customerBudgetLineItem: "", coreOfferingInHouse: "", highUserEngagement: "", highSomTraction: "", lowChurn: "", strongMarketingAdoptionPlan: "", fundingProvidesRunway: "", useCaseSupport: false, technicalDifferentiation: false, teamBackground: false, marketAnalysis: false, revenueModel: false, customerAcquisition: false, financialReview: false, riskAnalysis: false, charterDocuments: false, boardMinutes: false, stockCapTable: false, regulatory: false, intellectualProperty: false, managementEmployee: false, financialAudit: false, preScreen: false, scorecard: false, diligence: false, portfolio: false, pass: false),
-            Company(name: "Company C", description: "A good company to invest in", city: "Chicago", state: "IL", website: "", industry: "", agent: "", referral: false, strongReferral: false, priority: false, email1Sent: false, responseUnder24Hours: false, iot: false, midwest: false, leadInvestor: false, preSeedUnder6M: false, raiseUnder1M: false, founderRightPersonToAddressProblem: "", founderIsResponsive: "", ideaHasStrongRecurringRevenueComponent: "", teamCommittedFullTimePostClose: "", tractable: false, democratization: false, accessToIdleSupply: false, customerExpansion: false, networkEffects: false, bizDevInnovation: false, competeWithNonConsumption: false, thesisCounter: 0, founderStrengthIT: "", founderStrengthSales: "", founderStrengthMarketing: "", founderStrengthHustler: "", founderStrengthLearner: "", foundStoryStoryTellingAbility: "", foundDecisionMakingLogic: "", founderCustomerObsessed: "", founderDomainExpertise: "", teamStrongTechnicalBuilder: "", teamStrongBDLeader: "", clearProblemDefinition: "", largeGrowingTamSamSom: "", validRealMoat: "", strongBeachHead: "", ableToBridgeTamSam: "", tenYearTest: "", clearUserBuyer: "", signularFocusedModel: "", definedSuccessMetrics: "", favorableMarketTrend: "", customerBudgetLineItem: "", coreOfferingInHouse: "", highUserEngagement: "", highSomTraction: "", lowChurn: "", strongMarketingAdoptionPlan: "", fundingProvidesRunway: "", useCaseSupport: false, technicalDifferentiation: false, teamBackground: false, marketAnalysis: false, revenueModel: false, customerAcquisition: false, financialReview: false, riskAnalysis: false, charterDocuments: false, boardMinutes: false, stockCapTable: false, regulatory: false, intellectualProperty: false, managementEmployee: false, financialAudit: false, preScreen: false, scorecard: false, diligence: false, portfolio: false, pass: false),
-            Company(name: "Company D", description: "A good company to invest in", city: "Chicago", state: "IL", website: "", industry: "", agent: "", referral: false, strongReferral: false, priority: false, email1Sent: false, responseUnder24Hours: false, iot: false, midwest: false, leadInvestor: false, preSeedUnder6M: false, raiseUnder1M: false, founderRightPersonToAddressProblem: "", founderIsResponsive: "", ideaHasStrongRecurringRevenueComponent: "", teamCommittedFullTimePostClose: "", tractable: false, democratization: false, accessToIdleSupply: false, customerExpansion: false, networkEffects: false, bizDevInnovation: false, competeWithNonConsumption: false, thesisCounter: 0, founderStrengthIT: "", founderStrengthSales: "", founderStrengthMarketing: "", founderStrengthHustler: "", founderStrengthLearner: "", foundStoryStoryTellingAbility: "", foundDecisionMakingLogic: "", founderCustomerObsessed: "", founderDomainExpertise: "", teamStrongTechnicalBuilder: "", teamStrongBDLeader: "", clearProblemDefinition: "", largeGrowingTamSamSom: "", validRealMoat: "", strongBeachHead: "", ableToBridgeTamSam: "", tenYearTest: "", clearUserBuyer: "", signularFocusedModel: "", definedSuccessMetrics: "", favorableMarketTrend: "", customerBudgetLineItem: "", coreOfferingInHouse: "", highUserEngagement: "", highSomTraction: "", lowChurn: "", strongMarketingAdoptionPlan: "", fundingProvidesRunway: "", useCaseSupport: false, technicalDifferentiation: false, teamBackground: false, marketAnalysis: false, revenueModel: false, customerAcquisition: false, financialReview: false, riskAnalysis: false, charterDocuments: false, boardMinutes: false, stockCapTable: false, regulatory: false, intellectualProperty: false, managementEmployee: false, financialAudit: false, preScreen: false, scorecard: false, diligence: false, portfolio: false, pass: false),
-            Company(name: "Company E", description: "A good company to invest in", city: "Chicago", state: "IL", website: "", industry: "", agent: "", referral: false, strongReferral: false, priority: false, email1Sent: false, responseUnder24Hours: false, iot: false, midwest: false, leadInvestor: false, preSeedUnder6M: false, raiseUnder1M: false, founderRightPersonToAddressProblem: "", founderIsResponsive: "", ideaHasStrongRecurringRevenueComponent: "", teamCommittedFullTimePostClose: "", tractable: false, democratization: false, accessToIdleSupply: false, customerExpansion: false, networkEffects: false, bizDevInnovation: false, competeWithNonConsumption: false, thesisCounter: 0, founderStrengthIT: "", founderStrengthSales: "", founderStrengthMarketing: "", founderStrengthHustler: "", founderStrengthLearner: "", foundStoryStoryTellingAbility: "", foundDecisionMakingLogic: "", founderCustomerObsessed: "", founderDomainExpertise: "", teamStrongTechnicalBuilder: "", teamStrongBDLeader: "", clearProblemDefinition: "", largeGrowingTamSamSom: "", validRealMoat: "", strongBeachHead: "", ableToBridgeTamSam: "", tenYearTest: "", clearUserBuyer: "", signularFocusedModel: "", definedSuccessMetrics: "", favorableMarketTrend: "", customerBudgetLineItem: "", coreOfferingInHouse: "", highUserEngagement: "", highSomTraction: "", lowChurn: "", strongMarketingAdoptionPlan: "", fundingProvidesRunway: "", useCaseSupport: false, technicalDifferentiation: false, teamBackground: false, marketAnalysis: false, revenueModel: false, customerAcquisition: false, financialReview: false, riskAnalysis: false, charterDocuments: false, boardMinutes: false, stockCapTable: false, regulatory: false, intellectualProperty: false, managementEmployee: false, financialAudit: false, preScreen: false, scorecard: false, diligence: false, portfolio: false, pass: false),
-            Company(name: "Company F", description: "A good company to invest in", city: "Chicago", state: "IL", website: "", industry: "", agent: "", referral: false, strongReferral: false, priority: false, email1Sent: false, responseUnder24Hours: false, iot: false, midwest: false, leadInvestor: false, preSeedUnder6M: false, raiseUnder1M: false, founderRightPersonToAddressProblem: "", founderIsResponsive: "", ideaHasStrongRecurringRevenueComponent: "", teamCommittedFullTimePostClose: "", tractable: false, democratization: false, accessToIdleSupply: false, customerExpansion: false, networkEffects: false, bizDevInnovation: false, competeWithNonConsumption: false, thesisCounter: 0, founderStrengthIT: "", founderStrengthSales: "", founderStrengthMarketing: "", founderStrengthHustler: "", founderStrengthLearner: "", foundStoryStoryTellingAbility: "", foundDecisionMakingLogic: "", founderCustomerObsessed: "", founderDomainExpertise: "", teamStrongTechnicalBuilder: "", teamStrongBDLeader: "", clearProblemDefinition: "", largeGrowingTamSamSom: "", validRealMoat: "", strongBeachHead: "", ableToBridgeTamSam: "", tenYearTest: "", clearUserBuyer: "", signularFocusedModel: "", definedSuccessMetrics: "", favorableMarketTrend: "", customerBudgetLineItem: "", coreOfferingInHouse: "", highUserEngagement: "", highSomTraction: "", lowChurn: "", strongMarketingAdoptionPlan: "", fundingProvidesRunway: "", useCaseSupport: false, technicalDifferentiation: false, teamBackground: false, marketAnalysis: false, revenueModel: false, customerAcquisition: false, financialReview: false, riskAnalysis: false, charterDocuments: false, boardMinutes: false, stockCapTable: false, regulatory: false, intellectualProperty: false, managementEmployee: false, financialAudit: false, preScreen: false, scorecard: false, diligence: false, portfolio: false, pass: false)
-            
+            /*
+            Company(name: "Sample Company", description: "A good company to invest in", city: "Chicago", state: "IL", website: "", industry: "", agent: "", referral: true, strongReferral: false, priority: false, email1Sent: false, responseUnder24Hours: false, iot: false, midwest: false, leadInvestor: false, preSeedUnder6M: false, raiseUnder1M: false, founderRightPersonToAddressProblem: "", founderIsResponsive: "", ideaHasStrongRecurringRevenueComponent: "", teamCommittedFullTimePostClose: "", tractable: false, democratization: false, accessToIdleSupply: false, customerExpansion: false, networkEffects: false, bizDevInnovation: false, competeWithNonConsumption: false, thesisCounter: 0, founderStrengthIT: "", founderStrengthSales: "", founderStrengthMarketing: "", founderStrengthHustler: "", founderStrengthLearner: "", foundStoryStoryTellingAbility: "", foundDecisionMakingLogic: "", founderCustomerObsessed: "", founderDomainExpertise: "", teamStrongTechnicalBuilder: "", teamStrongBDLeader: "", clearProblemDefinition: "", largeGrowingTamSamSom: "", validRealMoat: "", strongBeachHead: "", ableToBridgeTamSam: "", tenYearTest: "", clearUserBuyer: "", signularFocusedModel: "", definedSuccessMetrics: "", favorableMarketTrend: "", customerBudgetLineItem: "", coreOfferingInHouse: "", highUserEngagement: "", highSomTraction: "", lowChurn: "", strongMarketingAdoptionPlan: "", fundingProvidesRunway: "", useCaseSupport: false, technicalDifferentiation: false, teamBackground: false, marketAnalysis: false, revenueModel: false, customerAcquisition: false, financialReview: false, riskAnalysis: false, charterDocuments: false, boardMinutes: false, stockCapTable: false, regulatory: false, intellectualProperty: false, managementEmployee: false, financialAudit: false, preScreen: false, scorecard: false, diligence: false, portfolio: false, pass: false)
+*/
         ]
         return sampleCompanies
     } // end sampleCompanies()
+
+// ------------------------------------------- sample Lead array
+    static func sampleLeads() -> [Company]{
+        let sampleLeads: [Company] = [
+/*
+ Company(name: "Sample Lead", description: "A good company to invest in", city: "Chicago", state: "IL", website: "", industry: "", agent: "", referral: true, strongReferral: false, priority: false, email1Sent: false, responseUnder24Hours: false, iot: false, midwest: false, leadInvestor: false, preSeedUnder6M: false, raiseUnder1M: false, founderRightPersonToAddressProblem: "", founderIsResponsive: "", ideaHasStrongRecurringRevenueComponent: "", teamCommittedFullTimePostClose: "", tractable: false, democratization: false, accessToIdleSupply: false, customerExpansion: false, networkEffects: false, bizDevInnovation: false, competeWithNonConsumption: false, thesisCounter: 0, founderStrengthIT: "", founderStrengthSales: "", founderStrengthMarketing: "", founderStrengthHustler: "", founderStrengthLearner: "", foundStoryStoryTellingAbility: "", foundDecisionMakingLogic: "", founderCustomerObsessed: "", founderDomainExpertise: "", teamStrongTechnicalBuilder: "", teamStrongBDLeader: "", clearProblemDefinition: "", largeGrowingTamSamSom: "", validRealMoat: "", strongBeachHead: "", ableToBridgeTamSam: "", tenYearTest: "", clearUserBuyer: "", signularFocusedModel: "", definedSuccessMetrics: "", favorableMarketTrend: "", customerBudgetLineItem: "", coreOfferingInHouse: "", highUserEngagement: "", highSomTraction: "", lowChurn: "", strongMarketingAdoptionPlan: "", fundingProvidesRunway: "", useCaseSupport: false, technicalDifferentiation: false, teamBackground: false, marketAnalysis: false, revenueModel: false, customerAcquisition: false, financialReview: false, riskAnalysis: false, charterDocuments: false, boardMinutes: false, stockCapTable: false, regulatory: false, intellectualProperty: false, managementEmployee: false, financialAudit: false, preScreen: false, scorecard: false, diligence: false, portfolio: false, pass: false)
+ */
+    ]
+    return sampleLeads
+ } // end sampleLeads()
+
+    
+// ------------------------------------------- sample Prescreen array
+    static func samplePrescreen() -> [Company]{
+        let samplePrescreen: [Company] = [
+            /*
+             Company(name: "Sample Prescreen", description: "A good company to invest in", city: "Chicago", state: "IL", website: "", industry: "", agent: "", referral: true, strongReferral: false, priority: false, email1Sent: false, responseUnder24Hours: false, iot: false, midwest: false, leadInvestor: false, preSeedUnder6M: false, raiseUnder1M: false, founderRightPersonToAddressProblem: "", founderIsResponsive: "", ideaHasStrongRecurringRevenueComponent: "", teamCommittedFullTimePostClose: "", tractable: false, democratization: false, accessToIdleSupply: false, customerExpansion: false, networkEffects: false, bizDevInnovation: false, competeWithNonConsumption: false, thesisCounter: 0, founderStrengthIT: "", founderStrengthSales: "", founderStrengthMarketing: "", founderStrengthHustler: "", founderStrengthLearner: "", foundStoryStoryTellingAbility: "", foundDecisionMakingLogic: "", founderCustomerObsessed: "", founderDomainExpertise: "", teamStrongTechnicalBuilder: "", teamStrongBDLeader: "", clearProblemDefinition: "", largeGrowingTamSamSom: "", validRealMoat: "", strongBeachHead: "", ableToBridgeTamSam: "", tenYearTest: "", clearUserBuyer: "", signularFocusedModel: "", definedSuccessMetrics: "", favorableMarketTrend: "", customerBudgetLineItem: "", coreOfferingInHouse: "", highUserEngagement: "", highSomTraction: "", lowChurn: "", strongMarketingAdoptionPlan: "", fundingProvidesRunway: "", useCaseSupport: false, technicalDifferentiation: false, teamBackground: false, marketAnalysis: false, revenueModel: false, customerAcquisition: false, financialReview: false, riskAnalysis: false, charterDocuments: false, boardMinutes: false, stockCapTable: false, regulatory: false, intellectualProperty: false, managementEmployee: false, financialAudit: false, preScreen: false, scorecard: false, diligence: false, portfolio: false, pass: false)
+             */
+        ]
+        return samplePrescreen
+    } // end samplePrescreen()
     
     
 } // end class Company

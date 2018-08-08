@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36660FEF211A1D90006636E8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36660FEE211A1D90006636E8 /* HomeViewController.swift */; };
 		3685845021176944000513A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685844F21176944000513A3 /* AppDelegate.swift */; };
 		3685845521176944000513A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3685845321176944000513A3 /* Main.storyboard */; };
 		3685845721176945000513A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3685845621176945000513A3 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36660FEE211A1D90006636E8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3685844C21176944000513A3 /* Pigeon Capital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pigeon Capital.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3685844F21176944000513A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3685845421176944000513A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		3685844321176944000513A3 = {
 			isa = PBXGroup;
 			children = (
+				36660FEE211A1D90006636E8 /* HomeViewController.swift */,
 				3685845321176944000513A3 /* Main.storyboard */,
 				3685846221176B4B000513A3 /* Models */,
 				3685846121176968000513A3 /* Lead View Controllers */,
@@ -181,6 +184,7 @@
 				36A395D121188D1200E39519 /* PreScreenTableViewCell.swift in Sources */,
 				3685846621179F1B000513A3 /* LeadTableViewController.swift in Sources */,
 				36A395CF21188CFB00E39519 /* PreScreenTableViewController.swift in Sources */,
+				36660FEF211A1D90006636E8 /* HomeViewController.swift in Sources */,
 				3685845021176944000513A3 /* AppDelegate.swift in Sources */,
 				3685846421176B66000513A3 /* Company.swift in Sources */,
 				36A395C62117C01400E39519 /* LeadTableViewCell.swift in Sources */,
