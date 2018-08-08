@@ -332,6 +332,8 @@ class Company: Codable {
     static let archiveLeadsURL = documentsDirectory.appendingPathComponent("leads").appendingPathExtension("plist")
 
     static let archivePreScreenURL = documentsDirectory.appendingPathComponent("prescreen").appendingPathExtension("plist")
+
+        static let archiveScorecardURL = documentsDirectory.appendingPathComponent("scorecard").appendingPathExtension("plist")
     
     // -------- SaveToFile
     
@@ -352,6 +354,13 @@ class Company: Codable {
         let encodedCompanies = try? propertyListEncoder.encode(preScreened)
         try? encodedCompanies?.write(to: archivePreScreenURL, options: .noFileProtection)
     } // end savePreScreenedToFile()
+
+    static func saveScorecardToFile(scorecard: [Company]){
+        let propertyListEncoder = PropertyListEncoder()
+        let encodedCompanies = try? propertyListEncoder.encode(scorecard)
+        try? encodedCompanies?.write(to: archiveScorecardURL, options: .noFileProtection)
+    } // end saveScorecardToFile()
+    
     
     // -------- loadFromFile
     
@@ -388,7 +397,16 @@ class Company: Codable {
         return samplePrescreen()
     } // end loadPrescreenFromFile
 
-    
+    static func loadScorecardFromFile() -> [Company]? {
+        let propertyListDecoder = PropertyListDecoder()
+        // attempts to a URL if data already exists
+        if let retrievedScorecardData = try? Data(contentsOf: archiveScorecardURL) {
+            let decodedScorecard = try? propertyListDecoder.decode([Company].self, from: retrievedScorecardData)
+            // if the data exists, return the existing data
+            return decodedScorecard!}
+        // else call the sampleCompanies and return the starter data
+        return samplePrescreen()
+    } // end loadScorecardFromFile
     
     
     

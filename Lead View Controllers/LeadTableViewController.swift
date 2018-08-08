@@ -16,11 +16,9 @@ class LeadTableViewController: UITableViewController {
 // ------------------------------------ viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // modify Row Height to accomodate longer descriptions
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
-
     } // end viewDidLoad()
     
 
@@ -65,15 +63,13 @@ class LeadTableViewController: UITableViewController {
             let addLeadViewController = nav.topViewController as! AddLeadViewController
             addLeadViewController.lead = lead
         } // end if segue.identifier == "viewLead"
-        
-      
     
     func unwindLeadToHome(segue: UIStoryboardSegue){
         guard segue.identifier == "unwindLeadToHome" else { return }
         let homeViewController = segue.destination as! HomeViewController
         homeViewController.leads = leads
-        } // end if segue.identifier == "viewLead"
-    }
+        } // end if segue.identifier == "UnwindLeadToHome"
+    } // end prepare(for segue:)
     
     
 // Unwind To Lead Table View () w/ Save To File

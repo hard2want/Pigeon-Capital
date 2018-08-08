@@ -12,11 +12,13 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var leadsLabel: UILabel!
     @IBOutlet weak var prescreenLabel: UILabel!
+    @IBOutlet weak var scorecardLabel: UILabel!
     
     
     var allCompanies: [Company] = []
     var leads: [Company] = []
     var companiesToPrescreen: [Company] = []
+    var scorecard = Company.loadScorecardFromFile()!
     
     
     override func viewDidLoad() {
@@ -31,6 +33,7 @@ class HomeViewController: UIViewController {
         
         leadsLabel.text = "Leads: \(leads.count)"
         prescreenLabel.text = "Prescreen: \(companiesToPrescreen.count)"
+        scorecardLabel.text = "Scorecard: \(scorecard.count)"
     } // end viewDidLoad()
 
     
@@ -77,11 +80,34 @@ class HomeViewController: UIViewController {
         
         leadsLabel.text = "Leads: \(leads.count)"
         prescreenLabel.text = "Prescreen: \(companiesToPrescreen.count)"
+                scorecardLabel.text = "Scorecard: \(scorecard.count)"
         Company.saveCompaniesToFile(companies: allCompanies)
     } // end unwindLeadToHome(segue:)
 
     @IBAction func unwindPrescreenToHome(segue: UIStoryboardSegue ){
+        companiesToPrescreen.removeAll()
         
+        
+        let sourceViewController = segue.source as! PreScreenTableViewController
+        
+        let prescreenedFromPrescreen = sourceViewController.toPrescreen
+        for company in prescreenedFromPrescreen {
+            
+            if company.scorecard == true {
+                scorecard.append(company)
+                allCompanies.append(company)
+                Company.saveScorecardToFile(scorecard: scorecard)
+            } else {
+                companiesToPrescreen.append(company)
+                allCompanies.append(company)
+                Company.savePrescreenedToFile(preScreened: companiesToPrescreen)
+            } // end if/else
+        } // for company in prescreenedFromPrescreen
+        
+        leadsLabel.text = "Leads: \(leads.count)"
+        prescreenLabel.text = "Prescreen: \(companiesToPrescreen.count)"
+        scorecardLabel.text = "Scorecard: \(scorecard.count)"
+        Company.saveCompaniesToFile(companies: allCompanies)
     } // end
     
     // MARK: - Navigation
