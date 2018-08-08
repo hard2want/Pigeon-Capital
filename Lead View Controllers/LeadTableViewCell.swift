@@ -18,9 +18,6 @@ class LeadTableViewCell: UITableViewCell {
         cityStateSiteLabel.text = "\(company.city), \(company.state)  \(company.website)"
         descriptionLabel.text = company.description
         
-        if company.city == "missing city" || company.state == "missing state" || company.website == "missing website" {
-            cityStateSiteLabel.backgroundColor = .yellow
-        } // end if
     } // end update(with company: Company)
     
     override func awakeFromNib() {
@@ -30,7 +27,6 @@ class LeadTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     } // end setSelected()
 

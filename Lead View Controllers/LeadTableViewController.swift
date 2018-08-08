@@ -11,57 +11,18 @@ import UIKit
 class LeadTableViewController: UITableViewController {
 
 // ----------------------------------- Empty companies array []
-    var allCompanies: [Company] = []
     var leads: [Company] = []
-    var prescreen: [Company] = []
 
-// ------------------------------------ viewDidLoad() & didReceiveMemoryWarning()
+// ------------------------------------ viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("LeadVC ViewDidLoad called")
 
         // modify Row Height to accomodate longer descriptions
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
-        
-/*
-        let leadsOnly = Company.loadCompaniesFromFile()!
-        for company in leadsOnly {
-            if company.preScreen == false {
-                leads.append(company)
-                allCompanies.append(company)
-            } // end if
-        } // end for company in totalCompanies
- */
-        
-/*
-        // load saved leads or default starter list
-        if let savedLeads = Company.loadLeadsFromFile() {
-            leads = savedLeads
-        } // end if let savedLeads
- 
-        // load saved prescreened or default starter list
-        if let savedPrescreened = Company.loadPrescreenFromFile() {
-            prescreen = savedPrescreened
-        } // end if let savedLeads
-*/
+
     } // end viewDidLoad()
     
-/*
-    override func viewWillAppear(_ animated: Bool) {
-        if let tbc = tabBarController as? History {
-            print("TBCVC called via LVC viewWillAppear")
-            leads = tbc.allCompanies!
-            for company in leads {
-                print("LeadVC leads from BTBVC = \(company.name)")
-            }
-        }
-     } // end viewWillAppear
- */
-     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    } // end didReceiveMemoryWarning()
 
     
 // MARK: ----------------------------------------------------------------- Table view data source
@@ -111,7 +72,6 @@ class LeadTableViewController: UITableViewController {
         guard segue.identifier == "unwindLeadToHome" else { return }
         let homeViewController = segue.destination as! HomeViewController
         homeViewController.leads = leads
-        homeViewController.allCompanies = allCompanies
         } // end if segue.identifier == "viewLead"
     }
     
@@ -130,12 +90,9 @@ class LeadTableViewController: UITableViewController {
                 } else {
                     let newIndexPath = IndexPath(row: leads.count, section: 0)
                     leads.append(newLead)
-                    allCompanies.append(newLead)
                     tableView.insertRows(at: [newIndexPath], with: .automatic)
                 } // end else
-            
             } // end if newLead
-        
     } // end unwindToLeadTableView(segue: )
 
     /*
