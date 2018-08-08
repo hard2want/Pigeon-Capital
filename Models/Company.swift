@@ -334,6 +334,12 @@ class Company: Codable {
     static let archivePreScreenURL = documentsDirectory.appendingPathComponent("prescreen").appendingPathExtension("plist")
 
         static let archiveScorecardURL = documentsDirectory.appendingPathComponent("scorecard").appendingPathExtension("plist")
+
+    static let archiveDiligenceURL = documentsDirectory.appendingPathComponent("diligence").appendingPathExtension("plist")
+
+    static let archivePortfolioURL = documentsDirectory.appendingPathComponent("portfolio").appendingPathExtension("plist")
+
+    
     
     // -------- SaveToFile
     
@@ -360,7 +366,18 @@ class Company: Codable {
         let encodedCompanies = try? propertyListEncoder.encode(scorecard)
         try? encodedCompanies?.write(to: archiveScorecardURL, options: .noFileProtection)
     } // end saveScorecardToFile()
-    
+
+    static func saveDiligenceToFile(diligence: [Company]){
+        let propertyListEncoder = PropertyListEncoder()
+        let encodedCompanies = try? propertyListEncoder.encode(diligence)
+        try? encodedCompanies?.write(to: archiveDiligenceURL, options: .noFileProtection)
+    } // end saveDiligenceToFile()
+
+    static func savePortfolioToFile(portfolio: [Company]){
+        let propertyListEncoder = PropertyListEncoder()
+        let encodedCompanies = try? propertyListEncoder.encode(portfolio)
+        try? encodedCompanies?.write(to: archivePortfolioURL, options: .noFileProtection)
+    } // end savePortfolioToFile()
     
     // -------- loadFromFile
     
@@ -407,8 +424,28 @@ class Company: Codable {
         // else call the sampleCompanies and return the starter data
         return samplePrescreen()
     } // end loadScorecardFromFile
+
+    static func loadDiligenceFromFile() -> [Company]? {
+        let propertyListDecoder = PropertyListDecoder()
+        // attempts to a URL if data already exists
+        if let retrievedDiligenceData = try? Data(contentsOf: archiveDiligenceURL) {
+            let decodedDiligence = try? propertyListDecoder.decode([Company].self, from: retrievedDiligenceData)
+            // if the data exists, return the existing data
+            return decodedDiligence!}
+        // else call the sampleCompanies and return the starter data
+        return samplePrescreen()
+    } // end loadDiligenceFromFile
     
-    
+    static func loadPortfolioFromFile() -> [Company]? {
+        let propertyListDecoder = PropertyListDecoder()
+        // attempts to a URL if data already exists
+        if let retrievedPortfolioData = try? Data(contentsOf: archivePortfolioURL) {
+            let decodedPortfolio = try? propertyListDecoder.decode([Company].self, from: retrievedPortfolioData)
+            // if the data exists, return the existing data
+            return decodedPortfolio!}
+        // else call the sampleCompanies and return the starter data
+        return samplePrescreen()
+    } // end loadScorecardFromFile
     
     // ------------------------------------------- sample Company array
     
