@@ -17,12 +17,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var portfolioLabel: UILabel!
     
     
-    var allCompanies = Company.loadCompaniesFromFile()!
-    var leads = Company.loadLeadsFromFile()!
-    var companiesToPrescreen = Company.loadPrescreenFromFile()!
-    var scorecard = Company.loadScorecardFromFile()!
-    var diligence = Company.loadDiligenceFromFile()!
-    var portfolio = Company.loadPortfolioFromFile()!
+    var allCompanies: [Company] = []
+    var leads: [Company] = []
+    var companiesToPrescreen: [Company] = []
+    var scorecard: [Company] = []
+    var diligence: [Company] = []
+    var portfolio: [Company] = []
     
     
     override func viewDidLoad() {
@@ -58,21 +58,41 @@ class HomeViewController: UIViewController {
             leadsViewController.leads = leads
             leads.removeAll()
             Company.saveLeadsToFile(leads: leads)
-        }
+        } // end segue.identifier == "viewLeads"
         
         
         if segue.identifier == "leadsToPrescreen" {
             let nav = segue.destination as! UINavigationController
             let prescreenViewController = nav.topViewController as! PreScreenTableViewController
             prescreenViewController.toPrescreen = companiesToPrescreen
+            companiesToPrescreen.removeAll()
+            Company.savePrescreenedToFile(preScreened: companiesToPrescreen)
         } // end if segue.identifier == "leadsToPrescreen"
  
         if segue.identifier == "toScorecard" {
             let nav = segue.destination as! UINavigationController
             let scorecardViewController = nav.topViewController as! ScorecardTableViewController
             scorecardViewController.scorecard = scorecard
+            scorecard.removeAll()
+            Company.saveScorecardToFile(scorecard: scorecard)
         } // end if segue.identifier == "toScorecard"
         
+        if segue.identifier == "toDiligence" {
+            let nav = segue.destination as! UINavigationController
+            let diligenceViewController = nav.topViewController as! DiligenceTableViewController
+            diligenceViewController.diligence = diligence
+            diligence.removeAll()
+            Company.saveDiligenceToFile(diligence: diligence)
+        } // end if segue.identifier == "toDiligence"
+        /*
+        if segue.identifier == "toPortfolio" {
+            let nav = segue.destination as! UINavigationController
+            let portfolioViewController = nav.topViewController as! PortfolioTableViewController
+            portfolioViewController.portfolio = portfolio
+//            portfolio.removeAll()
+//            Company.savePortfolioToFile(portfolio: portfolio)
+        } // end if segue.identifier == "toPortfolio"
+        */
     } // end prepare for segue
 
     
@@ -147,4 +167,31 @@ class HomeViewController: UIViewController {
         diligenceLabel.text = "Diligence: \(diligence.count)"
         Company.saveCompaniesToFile(companies: allCompanies)
     } // end unwindScorecardToHome(segue:)
+    
+    @IBAction func unwindDiligenceToHome(segue: UIStoryboardSegue){
+        diligence.removeAll()
+        
+        let sourceViewController = segue.source as! DiligenceTableViewController
+        
+        let dilyFromDiligence = sourceViewController.diligence
+        for company in dilyFromDiligence {
+            
+            if company.portfolio == true {
+                portfolio.append(company)
+                allCompanies.append(company)
+                Company.savePortfolioToFile(portfolio: portfolio)
+            } else {
+                diligence.append(company)
+                allCompanies.append(company)
+                Company.saveDiligenceToFile(diligence: diligence)
+            } // end if/else
+        } // for company in dilyFromDiligence
+        
+        diligenceLabel.text = "Diligence: \(diligence.count)"
+        portfolioLabel.text = "Portfolio: \(portfolio.count)"
+        Company.saveCompaniesToFile(companies: allCompanies)
+    } // end unwindDiligenceToHome(segue:)
+    
+    
+    
 } // end homeViewController

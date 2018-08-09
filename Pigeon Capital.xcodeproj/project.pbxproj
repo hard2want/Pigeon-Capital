@@ -22,6 +22,9 @@
 		36A395CD21188CE000E39519 /* AddPreScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A395CC21188CE000E39519 /* AddPreScreenViewController.swift */; };
 		36A395CF21188CFB00E39519 /* PreScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A395CE21188CFB00E39519 /* PreScreenTableViewController.swift */; };
 		36A395D121188D1200E39519 /* PreScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A395D021188D1200E39519 /* PreScreenTableViewCell.swift */; };
+		36F0B937211C84D4004CDAB1 /* DiligenceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0B936211C84D4004CDAB1 /* DiligenceTableViewController.swift */; };
+		36F0B939211C84EC004CDAB1 /* DiligenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0B938211C84EC004CDAB1 /* DiligenceTableViewCell.swift */; };
+		36F0B93B211C8511004CDAB1 /* EditDiligenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0B93A211C8511004CDAB1 /* EditDiligenceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		36A395CC21188CE000E39519 /* AddPreScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPreScreenViewController.swift; sourceTree = "<group>"; };
 		36A395CE21188CFB00E39519 /* PreScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreScreenTableViewController.swift; sourceTree = "<group>"; };
 		36A395D021188D1200E39519 /* PreScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreScreenTableViewCell.swift; sourceTree = "<group>"; };
+		36F0B936211C84D4004CDAB1 /* DiligenceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiligenceTableViewController.swift; sourceTree = "<group>"; };
+		36F0B938211C84EC004CDAB1 /* DiligenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiligenceTableViewCell.swift; sourceTree = "<group>"; };
+		36F0B93A211C8511004CDAB1 /* EditDiligenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiligenceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 				3685846121176968000513A3 /* Lead View Controllers */,
 				36A395CB2118884000E39519 /* Prescreen View Controllers */,
 				3618B11C211AB87400E43B26 /* Scorecard View Controllers */,
+				36F0B935211C8491004CDAB1 /* Diligence View Controllers */,
 				3685844E21176944000513A3 /* Pigeon Capital */,
 				3685844D21176944000513A3 /* Products */,
 			);
@@ -124,6 +131,16 @@
 				36A395D021188D1200E39519 /* PreScreenTableViewCell.swift */,
 			);
 			path = "Prescreen View Controllers";
+			sourceTree = "<group>";
+		};
+		36F0B935211C8491004CDAB1 /* Diligence View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36F0B936211C84D4004CDAB1 /* DiligenceTableViewController.swift */,
+				36F0B938211C84EC004CDAB1 /* DiligenceTableViewCell.swift */,
+				36F0B93A211C8511004CDAB1 /* EditDiligenceViewController.swift */,
+			);
+			path = "Diligence View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F0B93B211C8511004CDAB1 /* EditDiligenceViewController.swift in Sources */,
 				3618B120211ABAEC00E43B26 /* ScorecardTableViewCell.swift in Sources */,
 				36A395CD21188CE000E39519 /* AddPreScreenViewController.swift in Sources */,
 				36A395D121188D1200E39519 /* PreScreenTableViewCell.swift in Sources */,
@@ -205,9 +223,11 @@
 				3618B122211ABCAE00E43B26 /* EditScorecardViewController.swift in Sources */,
 				36660FEF211A1D90006636E8 /* HomeViewController.swift in Sources */,
 				3685845021176944000513A3 /* AppDelegate.swift in Sources */,
+				36F0B937211C84D4004CDAB1 /* DiligenceTableViewController.swift in Sources */,
 				3618B11E211AB8AA00E43B26 /* ScorecardTableViewController.swift in Sources */,
 				3685846421176B66000513A3 /* Company.swift in Sources */,
 				36A395C62117C01400E39519 /* LeadTableViewCell.swift in Sources */,
+				36F0B939211C84EC004CDAB1 /* DiligenceTableViewCell.swift in Sources */,
 				36A395CA2117CB8900E39519 /* AddLeadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

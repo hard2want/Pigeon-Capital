@@ -12,13 +12,12 @@ class AddPreScreenViewController: UIViewController {
     
     var screened: Company?
     
-    @IBOutlet weak var companyTextField: UITextField!
-    @IBOutlet weak var cityTextField: UITextField!
-    @IBOutlet weak var stateTextField: UITextField!
-    @IBOutlet weak var websiteTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
-    @IBOutlet weak var agentTextField: UITextField!
-    @IBOutlet weak var industryTextField: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak var websiteLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var industryLabel: UILabel!
     
     @IBOutlet weak var iotSwitch: UISwitch!
     @IBOutlet weak var midwestSwitch: UISwitch!
@@ -34,13 +33,12 @@ class AddPreScreenViewController: UIViewController {
         super.viewDidLoad()
         
         if let company = screened {
-            companyTextField.text = company.name
-            cityTextField.text = company.city
-            stateTextField.text = company.state
-            websiteTextField.text = company.website
-            descriptionTextField.text = company.description
-            agentTextField.text = company.agent
-            industryTextField.text = company.industry
+            nameLabel.text = company.name
+            cityLabel.text = company.city
+            stateLabel.text = company.state
+            websiteLabel.text = company.website
+            descriptionLabel.text = company.description
+            industryLabel.text = company.industry
             iotSwitch.isOn = company.iot
             midwestSwitch.isOn = company.midwest
             leadInvestorSwitch.isOn = company.leadInvestor

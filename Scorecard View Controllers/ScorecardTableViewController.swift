@@ -20,7 +20,6 @@ class ScorecardTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     } // end numberOfSections
 
@@ -51,13 +50,13 @@ class ScorecardTableViewController: UITableViewController {
             let nav = segue.destination as! UINavigationController
             let updateScorecardViewController = nav.topViewController as! EditScorecardViewController
             updateScorecardViewController.score = score
-        } // end if segue.identifier == "preScreenLead"
+        } // end if segue.identifier == "updateScorecard"
 
         func unwindScorecardToHome(segue: UIStoryboardSegue){
             guard segue.identifier == "unwindScorecardToHome" else { return }
             let homeViewController = segue.destination as! HomeViewController
             homeViewController.scorecard = scorecard
-        } // end if segue.identifier == "UnwindPrescreenToHome"    } // end prepare(for segue: )
+        } // end if segue.identifier == "UnwindScorecardToHome"
     } // end prepare(segue:)
 
     @IBAction func unwindToScorecardTableView(segue: UIStoryboardSegue ){
@@ -75,7 +74,7 @@ class ScorecardTableViewController: UITableViewController {
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             } // end else
         } // end if let company
-    } // end unwindToPreScreenTableView(segue: )
+    } // end unwindToScorecardTableView(segue: )
 
     
     
