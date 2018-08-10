@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36097937211CC3D6005D9C8C /* PortfolioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36097936211CC3D6005D9C8C /* PortfolioTableViewController.swift */; };
+		36097939211CC3EC005D9C8C /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36097938211CC3EC005D9C8C /* PortfolioTableViewCell.swift */; };
 		3618B11E211AB8AA00E43B26 /* ScorecardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618B11D211AB8AA00E43B26 /* ScorecardTableViewController.swift */; };
 		3618B120211ABAEC00E43B26 /* ScorecardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618B11F211ABAEC00E43B26 /* ScorecardTableViewCell.swift */; };
 		3618B122211ABCAE00E43B26 /* EditScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618B121211ABCAE00E43B26 /* EditScorecardViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36097936211CC3D6005D9C8C /* PortfolioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewController.swift; sourceTree = "<group>"; };
+		36097938211CC3EC005D9C8C /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
 		3618B11D211AB8AA00E43B26 /* ScorecardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardTableViewController.swift; sourceTree = "<group>"; };
 		3618B11F211ABAEC00E43B26 /* ScorecardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardTableViewCell.swift; sourceTree = "<group>"; };
 		3618B121211ABCAE00E43B26 /* EditScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScorecardViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36097935211CC05A005D9C8C /* Portfolio View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36097936211CC3D6005D9C8C /* PortfolioTableViewController.swift */,
+				36097938211CC3EC005D9C8C /* PortfolioTableViewCell.swift */,
+			);
+			path = "Portfolio View Controllers";
+			sourceTree = "<group>";
+		};
 		3618B11C211AB87400E43B26 /* Scorecard View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,13 +87,14 @@
 		3685844321176944000513A3 = {
 			isa = PBXGroup;
 			children = (
-				36660FEE211A1D90006636E8 /* HomeViewController.swift */,
 				3685845321176944000513A3 /* Main.storyboard */,
+				36660FEE211A1D90006636E8 /* HomeViewController.swift */,
 				3685846221176B4B000513A3 /* Models */,
 				3685846121176968000513A3 /* Lead View Controllers */,
 				36A395CB2118884000E39519 /* Prescreen View Controllers */,
 				3618B11C211AB87400E43B26 /* Scorecard View Controllers */,
 				36F0B935211C8491004CDAB1 /* Diligence View Controllers */,
+				36097935211CC05A005D9C8C /* Portfolio View Controllers */,
 				3685844E21176944000513A3 /* Pigeon Capital */,
 				3685844D21176944000513A3 /* Products */,
 			);
@@ -223,7 +237,9 @@
 				3618B122211ABCAE00E43B26 /* EditScorecardViewController.swift in Sources */,
 				36660FEF211A1D90006636E8 /* HomeViewController.swift in Sources */,
 				3685845021176944000513A3 /* AppDelegate.swift in Sources */,
+				36097939211CC3EC005D9C8C /* PortfolioTableViewCell.swift in Sources */,
 				36F0B937211C84D4004CDAB1 /* DiligenceTableViewController.swift in Sources */,
+				36097937211CC3D6005D9C8C /* PortfolioTableViewController.swift in Sources */,
 				3618B11E211AB8AA00E43B26 /* ScorecardTableViewController.swift in Sources */,
 				3685846421176B66000513A3 /* Company.swift in Sources */,
 				36A395C62117C01400E39519 /* LeadTableViewCell.swift in Sources */,
@@ -375,6 +391,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PKPCSNSG45;
 				INFOPLIST_FILE = "Pigeon Capital/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,6 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PKPCSNSG45;
 				INFOPLIST_FILE = "Pigeon Capital/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

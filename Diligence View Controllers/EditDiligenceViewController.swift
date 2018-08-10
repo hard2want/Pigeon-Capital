@@ -66,7 +66,7 @@ class EditDiligenceViewController: UIViewController {
             intellectualPropertySwitch.isOn = company.intellectualProperty
             mgmtEmployeeSwitch.isOn = company.managementEmployee
             financialAuditSwitch.isOn = company.financialAudit
-            addToPortfolioSwitch.isOn = company.diligence
+            addToPortfolioSwitch.isOn = company.portfolio
             
             passSwitch.isOn = company.pass
             

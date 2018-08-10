@@ -10,11 +10,10 @@ import UIKit
 
 class DiligenceTableViewController: UITableViewController {
     
-        var diligence: [Company] = []
+    var diligence: [Company] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     } // end viewDidLoad()
 
     // MARK: - Table view data source
@@ -35,13 +34,15 @@ class DiligenceTableViewController: UITableViewController {
          if dillyDilly.portfolio == true {
             cell.backgroundColor = .green
          } // end if
-        
+        if dillyDilly.pass == true {
+            cell.backgroundColor = .red
+        }
          return cell
     } // end (cellForRowAt)
 
     
     // MARK: - Navigation
-
+// ---- Segue Out
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "updateDiligence" {
             let indexPath = tableView.indexPathForSelectedRow!
@@ -58,6 +59,7 @@ class DiligenceTableViewController: UITableViewController {
         } // end if segue.identifier == "UnwindDiligenceToHome"
     } // end prepare(for segue: )
 
+// ----- unwind In
     @IBAction func unwindToDiligenceTableView(segue: UIStoryboardSegue ){
         
         guard segue.identifier == "saveUnwind" else { return }

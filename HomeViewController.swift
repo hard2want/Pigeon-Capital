@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     var scorecard: [Company] = []
     var diligence: [Company] = []
     var portfolio: [Company] = []
+    var pass: [Company] = []
     
     
     override func viewDidLoad() {
@@ -34,6 +35,7 @@ class HomeViewController: UIViewController {
         let loadScorecard = Company.loadScorecardFromFile()!
         let loadDiligence = Company.loadDiligenceFromFile()!
         let loadPortfolio = Company.loadPortfolioFromFile()!
+        let loadPass = Company.loadPassFromFile()!
         
         allCompanies = loadCompanies
         leads = loadLeads
@@ -41,6 +43,7 @@ class HomeViewController: UIViewController {
         scorecard = loadScorecard
         diligence = loadDiligence
         portfolio = loadPortfolio
+        pass = loadPass
         
         leadsLabel.text = "Leads: \(leads.count)"
         prescreenLabel.text = "Prescreen: \(companiesToPrescreen.count)"
@@ -49,14 +52,14 @@ class HomeViewController: UIViewController {
         portfolioLabel.text = "Portfolio: \(portfolio.count)"
     } // end viewDidLoad()
 
-    
+// ---------- Sending Data Out
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "viewLeads" {
             let nav = segue.destination as! UINavigationController
             let leadsViewController = nav.topViewController as! LeadTableViewController
             leadsViewController.leads = leads
-            leads.removeAll()
+//            leads.removeAll()
             Company.saveLeadsToFile(leads: leads)
         } // end segue.identifier == "viewLeads"
         
@@ -65,7 +68,7 @@ class HomeViewController: UIViewController {
             let nav = segue.destination as! UINavigationController
             let prescreenViewController = nav.topViewController as! PreScreenTableViewController
             prescreenViewController.toPrescreen = companiesToPrescreen
-            companiesToPrescreen.removeAll()
+//            companiesToPrescreen.removeAll()
             Company.savePrescreenedToFile(preScreened: companiesToPrescreen)
         } // end if segue.identifier == "leadsToPrescreen"
  
@@ -73,7 +76,7 @@ class HomeViewController: UIViewController {
             let nav = segue.destination as! UINavigationController
             let scorecardViewController = nav.topViewController as! ScorecardTableViewController
             scorecardViewController.scorecard = scorecard
-            scorecard.removeAll()
+//            scorecard.removeAll()
             Company.saveScorecardToFile(scorecard: scorecard)
         } // end if segue.identifier == "toScorecard"
         
@@ -81,10 +84,10 @@ class HomeViewController: UIViewController {
             let nav = segue.destination as! UINavigationController
             let diligenceViewController = nav.topViewController as! DiligenceTableViewController
             diligenceViewController.diligence = diligence
-            diligence.removeAll()
+//            diligence.removeAll()
             Company.saveDiligenceToFile(diligence: diligence)
         } // end if segue.identifier == "toDiligence"
-        /*
+        
         if segue.identifier == "toPortfolio" {
             let nav = segue.destination as! UINavigationController
             let portfolioViewController = nav.topViewController as! PortfolioTableViewController
@@ -92,18 +95,20 @@ class HomeViewController: UIViewController {
 //            portfolio.removeAll()
 //            Company.savePortfolioToFile(portfolio: portfolio)
         } // end if segue.identifier == "toPortfolio"
-        */
+        
     } // end prepare for segue
 
     
-    
+// -------- Receiving Data in
     @IBAction func unwindLeadToHome(segue: UIStoryboardSegue ){
         leads.removeAll()
         let sourceViewController = segue.source as! LeadTableViewController
         let leadsFromLeads = sourceViewController.leads
         for company in leadsFromLeads {
            
-            if company.preScreen == true {
+            if company.pass == true {
+                pass.append(company)
+            } else if company.preScreen == true {
                 companiesToPrescreen.append(company)
                 allCompanies.append(company)
                 Company.savePrescreenedToFile(preScreened: companiesToPrescreen)
@@ -127,7 +132,9 @@ class HomeViewController: UIViewController {
         let prescreenedFromPrescreen = sourceViewController.toPrescreen
         for company in prescreenedFromPrescreen {
             
-            if company.scorecard == true {
+            if company.pass == true {
+                pass.append(company)
+            } else if company.scorecard == true {
                 scorecard.append(company)
                 allCompanies.append(company)
                 Company.saveScorecardToFile(scorecard: scorecard)
@@ -152,7 +159,9 @@ class HomeViewController: UIViewController {
         let scoredFromScorecard = sourceViewController.scorecard
         for company in scoredFromScorecard {
             
-            if company.diligence == true {
+            if company.pass == true {
+                pass.append(company)
+            } else if company.diligence == true {
                 diligence.append(company)
                 allCompanies.append(company)
                 Company.saveDiligenceToFile(diligence: diligence)
@@ -176,7 +185,9 @@ class HomeViewController: UIViewController {
         let dilyFromDiligence = sourceViewController.diligence
         for company in dilyFromDiligence {
             
-            if company.portfolio == true {
+            if company.pass == true {
+                pass.append(company)
+            } else if company.portfolio == true {
                 portfolio.append(company)
                 allCompanies.append(company)
                 Company.savePortfolioToFile(portfolio: portfolio)
@@ -191,7 +202,9 @@ class HomeViewController: UIViewController {
         portfolioLabel.text = "Portfolio: \(portfolio.count)"
         Company.saveCompaniesToFile(companies: allCompanies)
     } // end unwindDiligenceToHome(segue:)
-    
+   
+    @IBAction func unwindPortfolioToHome(segue: UIStoryboardSegue){
+    } // end unwindPortfolioToHome(segue:)
     
     
 } // end homeViewController

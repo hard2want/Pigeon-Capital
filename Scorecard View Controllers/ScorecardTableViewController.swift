@@ -36,6 +36,9 @@ class ScorecardTableViewController: UITableViewController {
         if score.diligence == true {
             cell.backgroundColor = .green
         } // end if
+        if score.pass == true {
+            cell.backgroundColor = .red
+        }
         
         return cell
     } // end cellForRowAt

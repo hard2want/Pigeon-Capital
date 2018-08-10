@@ -72,7 +72,7 @@
                             <outlet property="delegate" destination="Hnc-55-PbO" id="hVQ-Rz-my0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Leads" id="RxM-Oa-pJZ">
+                    <navigationItem key="navigationItem" title="Leads Awaiting Prescreening Analysis" id="RxM-Oa-pJZ">
                         <barButtonItem key="leftBarButtonItem" title="Home" id="g5Y-8x-Ohm">
                             <connections>
                                 <segue destination="qIS-CB-iJN" kind="unwind" identifier="unwindLeadToHome" unwindAction="unwindLeadToHomeWithSegue:" id="sGr-zs-dJZ"/>
@@ -90,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="687.5" y="-52.1484375"/>
         </scene>
-        <!--Add Lead View Controller-->
+        <!--Enter A New Lead / Modify An Existing Lead-->
         <scene sceneID="orf-eu-3qY">
             <objects>
                 <viewController id="Q5J-3b-CpW" customClass="AddLeadViewController" customModule="Pigeon_Capital" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,13 +122,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOj-we-XOB">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the company's name and legal status" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOj-we-XOB">
                                 <rect key="frame" x="71" y="124" width="658" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qqP-EH-u1a">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current HQ City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qqP-EH-u1a">
                                 <rect key="frame" x="71" y="232" width="221" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -140,7 +140,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oW1-Jr-WmW">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. companyName.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oW1-Jr-WmW">
                                 <rect key="frame" x="465" y="232" width="264" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -152,7 +152,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EIO-gc-DNc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Summarize the company's value proposition in one line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EIO-gc-DNc">
                                 <rect key="frame" x="71" y="331" width="658" height="34"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -230,13 +230,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OsG-oZ-B7C">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Stack sponsor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OsG-oZ-B7C">
                                 <rect key="frame" x="71" y="439" width="221" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rpJ-yH-poK">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Match to New Stack focus area" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rpJ-yH-poK">
                                 <rect key="frame" x="465" y="439" width="264" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -355,7 +355,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VZk-9C-o9w"/>
                     </view>
-                    <navigationItem key="navigationItem" id="j4z-Vt-MPT">
+                    <navigationItem key="navigationItem" title="Enter A New Lead / Modify An Existing Lead" id="j4z-Vt-MPT">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="h2P-z7-vDs">
                             <connections>
                                 <segue destination="X7U-QT-5w5" kind="unwind" unwindAction="unwindToLeadTableViewWithSegue:" id="qQO-wO-wcI"/>
@@ -389,7 +389,7 @@
             </objects>
             <point key="canvasLocation" x="2567.1875" y="-52.1484375"/>
         </scene>
-        <!--Add Pre Screen View Controller-->
+        <!--Update Prescreen Analysis-->
         <scene sceneID="Sbg-yc-FsQ">
             <objects>
                 <viewController id="37y-ZD-zc4" customClass="AddPreScreenViewController" customModule="Pigeon_Capital" customModuleProvider="target" sceneMemberID="viewController">
@@ -595,7 +595,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lSc-75-jBa"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AL4-jz-deo">
+                    <navigationItem key="navigationItem" title="Update Prescreen Analysis" id="AL4-jz-deo">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ftO-y0-5Nd">
                             <connections>
                                 <segue destination="w1C-bJ-mJC" kind="unwind" unwindAction="unwindToPreScreenTableViewWithSegue:" id="7cV-C9-QMf"/>
@@ -628,7 +628,7 @@
             </objects>
             <point key="canvasLocation" x="2566.40625" y="777.5390625"/>
         </scene>
-        <!--Edit Scorecard View Controller-->
+        <!--Companies Must Meet 2 of 7 Thesis Requirements -->
         <scene sceneID="cW6-Pu-mco">
             <objects>
                 <viewController id="2Sw-sJ-9WQ" customClass="EditScorecardViewController" customModule="Pigeon_Capital" customModuleProvider="target" sceneMemberID="viewController">
@@ -868,7 +868,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gMn-Sr-Psg"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yYb-Xc-eCa">
+                    <navigationItem key="navigationItem" title="Companies Must Meet 2 of 7 Thesis Requirements " id="yYb-Xc-eCa">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5xI-p3-fyg">
                             <connections>
                                 <segue destination="DlG-na-lPL" kind="unwind" unwindAction="unwindToScorecardTableViewWithSegue:" id="eGb-Mg-zX5"/>
@@ -1027,7 +1027,7 @@
             </objects>
             <point key="canvasLocation" x="-264.84375" y="-52.1484375"/>
         </scene>
-        <!--Leads to Pre Screen-->
+        <!--Leads That Need Prescreening-->
         <scene sceneID="d5m-kn-Ppk">
             <objects>
                 <tableViewController id="HQO-0G-LWv" customClass="PreScreenTableViewController" customModule="Pigeon_Capital" customModuleProvider="target" sceneMemberID="viewController">
@@ -1087,7 +1087,7 @@
                             <outlet property="delegate" destination="HQO-0G-LWv" id="GgS-Ro-9dt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Leads to Pre Screen" id="9PG-sg-OAB">
+                    <navigationItem key="navigationItem" title="Leads That Need Prescreening" id="9PG-sg-OAB">
                         <barButtonItem key="leftBarButtonItem" title="Home" id="b36-2V-leb">
                             <connections>
                                 <segue destination="jjH-Tw-STD" kind="unwind" identifier="unwindPrescreenToHome" unwindAction="unwindPrescreenToHomeWithSegue:" id="eG9-rI-TEL"/>
@@ -1117,7 +1117,7 @@
             </objects>
             <point key="canvasLocation" x="-265" y="778"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Screened Leads That Require Scorecard Analysis-->
         <scene sceneID="M3I-aX-4SV">
             <objects>
                 <tableViewController id="beP-dN-VA8" customClass="ScorecardTableViewController" customModule="Pigeon_Capital" customModuleProvider="target" sceneMemberID="viewController">
@@ -1177,7 +1177,7 @@
                             <outlet property="delegate" destination="beP-dN-VA8" id="oXM-my-l3d"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="0Xg-aB-2tL">
+                    <navigationItem key="navigationItem" title="Screened Leads That Require Scorecard Analysis" id="0Xg-aB-2tL">
                         <barButtonItem key="leftBarButtonItem" title="Home" id="Ox2-3b-Tjr">
                             <connections>
                                 <segue destination="2Gu-dB-VBz" kind="unwind" identifier="unwindScorecardToHome" unwindAction="unwindScorecardToHomeWithSegue:" id="5CW-Zh-OgW"/>
@@ -1206,7 +1206,7 @@
             </objects>
             <point key="canvasLocation" x="-265" y="1584"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Companies Ready For Due Diligence Analysis-->
         <scene sceneID="QIi-um-Ig5">
             <objects>
                 <tableViewController id="l2L-ag-7XJ" customClass="DiligenceTableViewController" customModule="Pigeon_Capital" customModuleProvider="target" sceneMemberID="viewController">
@@ -1266,7 +1266,7 @@
                             <outlet property="delegate" destination="l2L-ag-7XJ" id="GNi-s6-pzg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="cxU-yW-gSh">
+                    <navigationItem key="navigationItem" title="Companies Ready For Due Diligence Analysis" id="cxU-yW-gSh">
                         <barButtonItem key="leftBarButtonItem" title="Home" id="pYh-wU-E8K">
                             <connections>
                                 <segue destination="zvt-Kf-kJO" kind="unwind" identifier="unwindDiligenceToHome" unwindAction="unwindDiligenceToHomeWithSegue:" id="etY-a5-QpR"/>
@@ -1295,16 +1295,16 @@
             </objects>
             <point key="canvasLocation" x="-265" y="2439"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Our Portfolio Companies-->
         <scene sceneID="dxX-5p-8jZ">
             <objects>
-                <tableViewController id="NY5-xh-Y1T" sceneMemberID="viewController">
+                <tableViewController id="NY5-xh-Y1T" customClass="PortfolioTableViewController" customModule="Pigeon_Capital" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="S37-fX-ovT">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="portfolioCell" id="GgD-vW-r3p">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="portfolioCell" id="GgD-vW-r3p" customClass="PortfolioTableViewCell" customModule="Pigeon_Capital" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GgD-vW-r3p" id="05y-Oz-TDx">
@@ -1342,6 +1342,11 @@
                                         <constraint firstAttribute="bottom" secondItem="Qh5-kW-qaK" secondAttribute="bottom" constant="5" id="uvc-Do-Q1u"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cityStateSiteLabel" destination="iZX-FY-m1t" id="GBv-Me-5vB"/>
+                                    <outlet property="descriptionLabel" destination="ZsR-oG-zUx" id="qY1-A9-0hT"/>
+                                    <outlet property="nameLabel" destination="IbS-Z2-FQv" id="9eZ-cI-Yt6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1349,9 +1354,16 @@
                             <outlet property="delegate" destination="NY5-xh-Y1T" id="d9b-NB-doV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="LX3-nB-I6W"/>
+                    <navigationItem key="navigationItem" title="Our Portfolio Companies" id="LX3-nB-I6W">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="uf2-QG-NFZ">
+                            <connections>
+                                <segue destination="jAR-Ui-yah" kind="unwind" unwindAction="unwindPortfolioToHomeWithSegue:" id="NVk-dH-Gxk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQa-qm-sqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jAR-Ui-yah" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="688" y="3220"/>
         </scene>
@@ -1443,7 +1455,7 @@
             </objects>
             <point key="canvasLocation" x="1706" y="1584"/>
         </scene>
-        <!--Edit Diligence View Controller-->
+        <!--Business And Legal Due Diligence Checklist-->
         <scene sceneID="h3p-NQ-oEy">
             <objects>
                 <viewController id="oHK-ls-DqN" customClass="EditDiligenceViewController" customModule="Pigeon_Capital" customModuleProvider="target" sceneMemberID="viewController">
@@ -1609,7 +1621,7 @@
                                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="rNr-0Y-KSy">
                                                                                                 <rect key="frame" x="0.0" y="295.5" width="364" height="31"/>
                                                                                                 <subviews>
-                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Acquisition" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDe-q4-Kik">
+                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cust. Acquisition" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDe-q4-Kik">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="157" height="31"/>
                                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                                         <nil key="textColor"/>
@@ -1815,7 +1827,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ltL-cX-PkB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7BL-v6-DIp">
+                    <navigationItem key="navigationItem" title="Business And Legal Due Diligence Checklist" id="7BL-v6-DIp">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CL3-vU-wgP">
                             <connections>
                                 <segue destination="WCq-El-ydx" kind="unwind" unwindAction="unwindToDiligenceTableViewWithSegue:" id="KiE-Xc-dhk"/>
@@ -1881,6 +1893,6 @@
         <image name="NSVLogo copy" width="753" height="538"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zme-Gf-M9E"/>
+        <segue reference="REv-cM-FFP"/>
     </inferredMetricsTieBreakers>
 </document>

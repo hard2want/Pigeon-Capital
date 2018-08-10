@@ -42,6 +42,9 @@ class PreScreenTableViewController: UITableViewController {
         if prescreened.scorecard == true {
             cell.backgroundColor = .green
         } // end if
+        if prescreened.pass == true {
+            cell.backgroundColor = .red
+        }
         return cell
     } // end tableView( cellForRowAt indexPath: IndexPath ) -> UITableViewCell
     

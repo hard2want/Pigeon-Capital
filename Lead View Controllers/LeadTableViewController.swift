@@ -46,6 +46,9 @@ class LeadTableViewController: UITableViewController {
         if lead.preScreen == true {
             cell.backgroundColor = .green
         }
+        if lead.pass == true {
+            cell.backgroundColor = .red
+        }
         return cell
     } // end tableView( cellForRowAt indexPath: IndexPath ) -> UITableViewCell
 

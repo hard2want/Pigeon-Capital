@@ -339,6 +339,7 @@ class Company: Codable {
 
     static let archivePortfolioURL = documentsDirectory.appendingPathComponent("portfolio").appendingPathExtension("plist")
 
+        static let archivePassURL = documentsDirectory.appendingPathComponent("pass").appendingPathExtension("plist")
     
     
     // -------- SaveToFile
@@ -378,7 +379,13 @@ class Company: Codable {
         let encodedCompanies = try? propertyListEncoder.encode(portfolio)
         try? encodedCompanies?.write(to: archivePortfolioURL, options: .noFileProtection)
     } // end savePortfolioToFile()
-    
+
+    static func savePassToFile(pass: [Company]){
+        let propertyListEncoder = PropertyListEncoder()
+        let encodedCompanies = try? propertyListEncoder.encode(pass)
+        try? encodedCompanies?.write(to: archivePassURL, options: .noFileProtection)
+    } // end savePassToFile()
+
     // -------- loadFromFile
     
     static func loadCompaniesFromFile() -> [Company]? {
@@ -444,8 +451,20 @@ class Company: Codable {
             // if the data exists, return the existing data
             return decodedPortfolio!}
         // else call the sampleCompanies and return the starter data
-        return samplePrescreen()
-    } // end loadScorecardFromFile
+        return sampleCompanies()
+    } // end loadPortfolioFromFile
+
+    static func loadPassFromFile() -> [Company]? {
+        let propertyListDecoder = PropertyListDecoder()
+        // attempts to a URL if data already exists
+        if let retrievedPassData = try? Data(contentsOf: archivePassURL) {
+            let decodedPass = try? propertyListDecoder.decode([Company].self, from: retrievedPassData)
+            // if the data exists, return the existing data
+            return decodedPass!}
+        // else call the sampleCompanies and return the starter data
+        return sampleCompanies()
+    } // end loadPassFromFile
+    
     
     // ------------------------------------------- sample Company array
     
