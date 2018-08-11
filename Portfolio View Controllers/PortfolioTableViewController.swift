@@ -52,12 +52,12 @@ class PortfolioTableViewController: UITableViewController {
             let nav = segue.destination as! UINavigationController
             let updatePortfolioViewController = nav.topViewController as! EditPortfolioViewController
             updatePortfolioViewController.unicorn = funded
-        } // end if segue.identifier == "updateDiligence"
+        } // end if segue.identifier == "updatePortfolio"
         
         func unwindPortfolioToHome(segue: UIStoryboardSegue){
             guard segue.identifier == "unwindPortfolioToHome" else { return }
             let homeViewController = segue.destination as! HomeViewController
-            homeViewController.diligence = portfolio
+            homeViewController.portfolio = portfolio
         } // end if segue.identifier == "UnwindPortfolioToHome"
     } // end prepare(for segue: )
 

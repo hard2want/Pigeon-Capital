@@ -95,7 +95,7 @@ class HomeViewController: UIViewController {
             let portfolioViewController = nav.topViewController as! PortfolioTableViewController
             portfolioViewController.portfolio = portfolio
 //            portfolio.removeAll()
-//            Company.savePortfolioToFile(portfolio: portfolio)
+            Company.savePortfolioToFile(portfolio: portfolio)
         } // end if segue.identifier == "toPortfolio"
         
     } // end prepare for segue
@@ -114,16 +114,20 @@ class HomeViewController: UIViewController {
             } else if company.preScreen == true {
                 companiesToPrescreen.append(company)
                 allCompanies.append(company)
-                Company.savePrescreenedToFile(preScreened: companiesToPrescreen)
+
             } else {
                 leads.append(company)
                 allCompanies.append(company)
-                Company.saveLeadsToFile(leads: leads)
+
             } // end if/else
         } // for company in leadsFromLeads
         
         leadsLabel.text = "Leads: \(leads.count)"
         prescreenLabel.text = "Prescreen: \(companiesToPrescreen.count)"
+        
+        Company.savePassToFile(pass: pass)
+                Company.saveLeadsToFile(leads: leads)
+        Company.savePrescreenedToFile(preScreened: companiesToPrescreen)
         Company.saveCompaniesToFile(companies: allCompanies)
  
     } // end unwindLeadToHome(segue:)
@@ -141,16 +145,20 @@ class HomeViewController: UIViewController {
             } else if company.scorecard == true {
                 scorecard.append(company)
                 allCompanies.append(company)
-                Company.saveScorecardToFile(scorecard: scorecard)
+
             } else {
                 companiesToPrescreen.append(company)
                 allCompanies.append(company)
-                Company.savePrescreenedToFile(preScreened: companiesToPrescreen)
+
             } // end if/else
         } // for company in prescreenedFromPrescreen
         
         prescreenLabel.text = "Prescreen: \(companiesToPrescreen.count)"
         scorecardLabel.text = "Scorecard: \(scorecard.count)"
+        
+        Company.savePassToFile(pass: pass)
+        Company.saveScorecardToFile(scorecard: scorecard)
+        Company.savePrescreenedToFile(preScreened: companiesToPrescreen)
         Company.saveCompaniesToFile(companies: allCompanies)
     } // end unwindPrescreenToHome(segue:)
     
@@ -168,16 +176,20 @@ class HomeViewController: UIViewController {
             } else if company.diligence == true {
                 diligence.append(company)
                 allCompanies.append(company)
-                Company.saveDiligenceToFile(diligence: diligence)
+
             } else {
                 scorecard.append(company)
                 allCompanies.append(company)
-                Company.saveScorecardToFile(scorecard: scorecard)
+
             } // end if/else
         } // for company in prescreenedFromPrescreen
 
         scorecardLabel.text = "Scorecard: \(scorecard.count)"
         diligenceLabel.text = "Diligence: \(diligence.count)"
+        
+        Company.savePassToFile(pass: pass)
+        Company.saveDiligenceToFile(diligence: diligence)
+        Company.saveScorecardToFile(scorecard: scorecard)
         Company.saveCompaniesToFile(companies: allCompanies)
     } // end unwindScorecardToHome(segue:)
     
@@ -194,16 +206,20 @@ class HomeViewController: UIViewController {
             } else if company.portfolio == true {
                 portfolio.append(company)
                 allCompanies.append(company)
-                Company.savePortfolioToFile(portfolio: portfolio)
+
             } else {
                 diligence.append(company)
                 allCompanies.append(company)
-                Company.saveDiligenceToFile(diligence: diligence)
+
             } // end if/else
         } // for company in dilyFromDiligence
         
         diligenceLabel.text = "Diligence: \(diligence.count)"
         portfolioLabel.text = "Portfolio: \(portfolio.count)"
+        
+        Company.savePassToFile(pass: pass)
+        Company.savePortfolioToFile(portfolio: portfolio)
+        Company.saveDiligenceToFile(diligence: diligence)
         Company.saveCompaniesToFile(companies: allCompanies)
     } // end unwindDiligenceToHome(segue:)
    
@@ -222,11 +238,11 @@ class HomeViewController: UIViewController {
             } else {
                 portfolio.append(company)
                 allCompanies.append(company)
-                Company.savePortfolioToFile(portfolio: portfolio)
             } // end if/else
         } // for company in resultsFromPortfolio
         
         portfolioLabel.text = "Portfolio: \(portfolio.count)"
+        Company.savePortfolioToFile(portfolio: portfolio)
         Company.saveCompaniesToFile(companies: allCompanies)
 
     } // end unwindPortfolioToHome(segue:)

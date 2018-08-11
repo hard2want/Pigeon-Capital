@@ -61,5 +61,9 @@ class EditPortfolioViewController: UIViewController {
         unicorn?.fail = failSwitch.isOn
         unicorn?.exit = exitSwitch.isOn
         
+        if unicorn?.fail == true || unicorn?.exit == true {
+            unicorn?.portfolio = false
+        }
+        
     } // end prepare(for segue:)
 } // end EditPortfolioViewController
