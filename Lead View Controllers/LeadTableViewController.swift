@@ -92,6 +92,33 @@ class LeadTableViewController: UITableViewController {
                     tableView.insertRows(at: [newIndexPath], with: .automatic)
                 } // end else
             } // end if newLead
+        
+        /*
+         leads.removeAll()
+         let sourceViewController = segue.source as! LeadTableViewController
+         let leadsFromLeads = sourceViewController.leads
+         for company in leadsFromLeads {
+         
+         if company.pass == true {
+         pass.append(company)
+         } else if company.preScreen == true {
+         companiesToPrescreen.append(company)
+         allCompanies.append(company)
+         Company.savePrescreenedToFile(preScreened: companiesToPrescreen)
+         } else {
+         leads.append(company)
+         allCompanies.append(company)
+         Company.saveLeadsToFile(leads: leads)
+         } // end if/else
+         } // for company in leadsFromLeads
+         
+         leadsLabel.text = "Leads: \(leads.count)"
+         prescreenLabel.text = "Prescreen: \(companiesToPrescreen.count)"
+         Company.saveCompaniesToFile(companies: allCompanies)
+
+         */
+        
+        
     } // end unwindToLeadTableView(segue: )
 
     /*
